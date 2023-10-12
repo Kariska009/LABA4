@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Определение объекта-дроби
+        const fraction1 = {
+            numerator: 5,
+            denominator: 4,
+        };
+
+        const fraction2 = {
+            numerator: 2,
+            denominator: 4,
+        };
+
+        // Функция для вычитания двух объектов-дробей
+        function subtractFractions(fraction1, fraction2) {
+            const commonDenominator = fraction1.denominator * fraction2.denominator;
+            const newNumerator1 = fraction1.numerator * fraction2.denominator;
+            const newNumerator2 = fraction2.numerator * fraction1.denominator;
+
+            const resultNumerator = newNumerator1 - newNumerator2;
+
+            return {
+                numerator: resultNumerator,
+                denominator: commonDenominator,
+            };
+        }
+
+        // Пример использования
+        const differenceFraction = subtractFractions(fraction1, fraction2);
+        console.log('Разность дробей:', differenceFraction.numerator + '/' + differenceFraction.denominator);  
+    </script>
+</body>
+
+</html>

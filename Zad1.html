@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // Определение объекта-прямоугольника
+        const rectangle = {
+            topLeft: { x: 0, y: 0 },
+            bottomRight: { x: 0, y: 0 },
+        };
+
+        // Функция для установки координат левой верхней точки
+        function setTopLeft(rect, x, y) {
+            rect.topLeft.x = x;
+            rect.topLeft.y = y;
+        }
+
+        // Функция для установки координат правой нижней точки
+        function setBottomRight(rect, x, y) {
+            rect.bottomRight.x = x;
+            rect.bottomRight.y = y;
+        }
+
+        // Функция для вывода информации о прямоугольнике
+        function printRectangleInfo(rect) {
+            console.log('Координаты левой верхней точки:', rect.topLeft.x, rect.topLeft.y);
+            console.log('Координаты правой нижней точки:', rect.bottomRight.x, rect.bottomRight.y);
+        }
+
+        // Пример использования
+        setTopLeft(rectangle, 1, 2);
+        setBottomRight(rectangle, 4, 3);
+        printRectangleInfo(rectangle);
+
+    </script>
+</body>
+
+</html>

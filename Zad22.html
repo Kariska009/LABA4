@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // Определение объекта-времени
+        const time = {
+            hours: 10,
+            minutes: 30,
+            seconds: 45,
+        };
+
+        // Функция для изменения времени на переданное количество минут
+        function addMinutesToTime(time, minutesToAdd) {
+            const totalMinutes = time.hours * 60 + time.minutes + minutesToAdd;
+
+            // Рассчитываем новые часы и минуты
+            const newHours = Math.floor(totalMinutes / 60);
+            const newMinutes = totalMinutes % 60;
+
+            // Обновляем объект-время
+            time.hours = newHours;
+            time.minutes = newMinutes;
+        }
+
+        // Пример использования
+        console.log('Исходное время:');
+        displayTime(time);
+
+        // Добавляем 90 минут
+        addMinutesToTime(time, 90);
+
+        console.log('\nВремя после добавления 90 минут:');
+        displayTime(time);
+    </script>
+</body>
+
+</html>

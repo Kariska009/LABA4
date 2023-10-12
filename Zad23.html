@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Определение объекта-времени
+        const time = {
+            hours: 10,
+            minutes: 30,
+            seconds: 45,
+        };
+
+        // Функция для изменения времени на переданное количество часов
+        function addHoursToTime(time, hoursToAdd) {
+            const totalHours = time.hours + hoursToAdd;
+
+            // Рассчитываем новые часы
+            const newHours = totalHours % 24;
+
+            // Обновляем объект-время
+            time.hours = newHours;
+        }
+
+        // Пример использования
+        console.log('Исходное время:');
+        displayTime(time);
+
+        // Добавляем 5 часов
+        addHoursToTime(time, 5);
+
+        console.log('\nВремя после добавления 5 часов:');
+        displayTime(time);  
+    </script>
+</body>
+
+</html>

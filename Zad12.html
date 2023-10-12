@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Функция для проверки, находится ли точка внутри прямоугольника
+        function isPointInsideRectangle(rect, pointX, pointY) {
+            const { topLeft, bottomRight } = rect;
+            return (
+                pointX >= topLeft.x &&
+                pointX <= bottomRight.x &&
+                pointY >= topLeft.y &&
+                pointY <= bottomRight.y
+            );
+        }
+
+        // Пример использования
+        const rectangle = {
+            topLeft: { x: 1, y: 2 },
+            bottomRight: { x: 4, y: 6 },
+        };
+
+        const pointX = 3;
+        const pointY = 4;
+
+        const isInside = isPointInsideRectangle(rectangle, pointX, pointY);
+        console.log(`Точка(${pointX}, ${pointY}) находится внутри прямоугольника: ${isInside}`);
+    </script>
+</body>
+
+</html>

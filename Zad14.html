@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Функция для подсчета времени с учетом перерывов
+        function calculateTravelTimeWithBreaks(distance, averageSpeed) {
+            if (averageSpeed <= 0) {
+                return 'Скорость должна быть положительной!';
+            }
+
+            const timeInHours = distance / averageSpeed;
+            const numberOfBreaks = Math.floor(timeInHours / 4);
+            const totalTimeInHours = timeInHours + numberOfBreaks;
+
+            const hours = Math.floor(totalTimeInHours);
+            const minutes = Math.floor((totalTimeInHours - hours) * 60);
+
+            return `Для преодоления ${distance} миль со средней скоростью ${averageSpeed} миль в час и учетом перерывов потребуется ${hours} часов и ${minutes} минут.;`
+        }
+
+        // Пример использования
+        const distanceToTravel = 200; // Расстояние в милях
+        const carSpeed = 60; // Средняя скорость в милях в час
+
+        const travelTime = calculateTravelTimeWithBreaks(distanceToTravel, carSpeed);
+        console.log(travelTime);
+    </script>
+</body>
+
+</html>

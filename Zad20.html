@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Определение объекта-времени
+        const time = {
+            hours: 10,
+            minutes: 30,
+            seconds: 45,
+        };
+
+        // Функция для вывода времени на экран
+        function displayTime(time) {
+            const hours = String(time.hours).padStart(2, '0'); // Добавляем ведущий ноль, если часы < 10
+            const minutes = String(time.minutes).padStart(2, '0'); // Добавляем ведущий ноль, если минуты < 10
+            const seconds = String(time.seconds).padStart(2, '0'); // Добавляем ведущий ноль, если секунды < 10
+
+            console.log(`Текущее время: ${hours}:${minutes}:${seconds}`);
+        }
+
+        // Пример использования
+        displayTime(time);  
+    </script>
+</body>
+
+</html>

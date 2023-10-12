@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Функция для смещения прямоугольника по осям X и Y
+        function moveRectangleXY(rect, deltaX, deltaY) {
+            rect.topLeft.x += deltaX;
+            rect.topLeft.y += deltaY;
+            rect.bottomRight.x += deltaX;
+            rect.bottomRight.y += deltaY;
+        }
+
+        // Пример использования
+        const rectangle = {
+            topLeft: { x: 1, y: 2 },
+            bottomRight: { x: 4, y: 6 },
+        };
+
+        console.log('Исходный прямоугольник:');
+        console.log('Координаты левой верхней точки:', rectangle.topLeft.x, rectangle.topLeft.y);
+        console.log('Координаты правой нижней точки:', rectangle.bottomRight.x, rectangle.bottomRight.y);
+
+        moveRectangleXY(rectangle, 2, 3);
+
+        console.log('\nПрямоугольник после смещения по осям X и Y:');
+        console.log('Координаты левой верхней точки:', rectangle.topLeft.x, rectangle.topLeft.y);
+        console.log('Координаты правой нижней точки:', rectangle.bottomRight.x, rectangle.bottomRight.y);  
+    </script>
+</body>
+
+</html>

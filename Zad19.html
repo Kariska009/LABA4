@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Определение объекта-дроби
+        const fraction1 = {
+            numerator: 3,
+            denominator: 5,
+        };
+
+        const fraction2 = {
+            numerator: 2,
+            denominator: 3,
+        };
+
+        // Функция для деления двух объектов-дробей
+        function divideFractions(fraction1, fraction2) {
+            if (fraction2.numerator === 0) {
+                return 'Деление на ноль невозможно.';
+            }
+
+            const resultNumerator = fraction1.numerator * fraction2.denominator;
+            const resultDenominator = fraction1.denominator * fraction2.numerator;
+
+            return {
+                numerator: resultNumerator,
+                denominator: resultDenominator,
+            };
+        }
+
+        // Пример использования
+        const quotientFraction = divideFractions(fraction1, fraction2);
+
+        if (typeof quotientFraction === 'string') {
+            console.log(quotientFraction);
+        } else {
+            console.log('Частное дробей:', quotientFraction.numerator + '/' + quotientFraction.denominator);
+        }    
+    </script>
+</body>
+
+</html>
